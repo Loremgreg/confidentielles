@@ -129,6 +129,11 @@
 
             <!-- Testimonial Card -->
             <div class="testimonial-card">
+                <!-- Radio buttons for carousel control (hidden) -->
+                <input type="radio" name="testimonial-slide" id="slide1" checked>
+                <input type="radio" name="testimonial-slide" id="slide2">
+                <input type="radio" name="testimonial-slide" id="slide3">
+
                 <div class="testimonial-inner">
                     <div class="testimonial-slides">
                         <!-- Slide 1 -->
@@ -163,6 +168,15 @@
                         </div>
                     </div>
 
+                    <!-- Navigation Arrows -->
+                    <div class="testimonial-nav">
+                        <label for="slide1" class="nav-arrow prev" data-slide="3"></label>
+                        <label for="slide2" class="nav-arrow prev" data-slide="1"></label>
+                        <label for="slide3" class="nav-arrow prev" data-slide="2"></label>
+                        <label for="slide1" class="nav-arrow next" data-slide="2"></label>
+                        <label for="slide2" class="nav-arrow next" data-slide="3"></label>
+                        <label for="slide3" class="nav-arrow next" data-slide="1"></label>
+                    </div>
                 </div>
             </div>
 

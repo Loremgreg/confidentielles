@@ -232,14 +232,20 @@ a:hover {
 .testimonial-card {
     background: var(--beige);
     border-radius: 20px;
-    padding: 3rem;
+    padding: 3rem 4rem;
     margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card input {
+    display: none;
 }
 
 .testimonial-slides {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 .testimonial-slide p {
@@ -247,9 +253,71 @@ a:hover {
     color: var(--charcoal);
 }
 
+.testimonial-slide {
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+    text-align: center;
+}
+
 .testimonial-slide p:first-child {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Show the active slide */
+#slide1:checked~.testimonial-inner .testimonial-slides .testimonial-slide:nth-child(1),
+#slide2:checked~.testimonial-inner .testimonial-slides .testimonial-slide:nth-child(2),
+#slide3:checked~.testimonial-inner .testimonial-slides .testimonial-slide:nth-child(3) {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Navigation Arrows */
+.testimonial-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.nav-arrow {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: none;
+    /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid var(--charcoal);
+    border-left: 2px solid var(--charcoal);
+    transform: rotate(-45deg);
+}
+
+.nav-arrow.next::before {
+    transform: rotate(135deg);
+}
+
+/* Show the correct arrows for each slide */
+#slide1:checked~.testimonial-inner .testimonial-nav label[data-slide="1"],
+#slide2:checked~.testimonial-inner .testimonial-nav label[data-slide="2"],
+#slide3:checked~.testimonial-inner .testimonial-nav label[data-slide="3"] {
+    display: flex;
 }
 
 .testimonial-cta {
@@ -306,6 +374,6 @@ a:hover {
     }
 
     .testimonial-card {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
 }
