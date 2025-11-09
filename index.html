@@ -1,432 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confidentielles - Médiation Familiale</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'teal-dark': '#006469',
-                        'beige': '#F7F4EB',
-                        'accent': '#690500',
-                        'accent-dark': '#1F0808',
-                    },
-                }
-            }
-        }
-    </script>
+    <title>Confidentielles – Accueil</title>
+    <meta http-equiv="refresh" content="0;url=html/index.html">
+    <link rel="canonical" href="html/index.html">
     <style>
+        :root {
+            color-scheme: light dark;
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+            background: #f7f4eb;
+            color: #002b2d;
         }
-
-
-        .hero-bg {
-            position: relative;
+        main {
+            padding: 2rem;
+            text-align: center;
+            max-width: 480px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 1rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
         }
-
-        .hero-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            filter: blur(3px);
-            z-index: 0;
-        }
-
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 100, 105, 0.7);
-            z-index: 1;
-        }
-
-        .services-bg {
-            background-color: #006469;
-        }
-
-        .footer-bg {
-            position: relative;
-            background: #F7F4EB;
-        }
-
-        .footer-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            filter: blur(4px) brightness(1.2);
-            opacity: 0.3;
-            z-index: 0;
-        }
-
-        .carousel-slide {
-            display: none;
-        }
-
-        .carousel-slide.active {
-            display: block;
-        }
-
-        .carousel-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.25);
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .carousel-dot.active {
-            background: #690500;
-        }
-
-        .logo-svg {
-            width: 40px;
-            height: 40px;
-        }
-
-        /* Improved text styles */
-        .hero-title {
-            font-weight: 400;
-            letter-spacing: -0.03em;
-        }
-
-        .section-title {
-            font-weight: 400;
+        h1 {
+            margin-bottom: 1rem;
+            font-weight: 500;
             letter-spacing: -0.02em;
         }
-
-        /* Better image positioning */
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        a {
+            color: #006469;
+            font-weight: 500;
+            text-decoration: none;
         }
-
-        /* Hero text alignment */
-        .hero-left {
-            align-self: flex-end;
-        }
-
-        .hero-right {
-            align-self: flex-end;
+        a:hover,
+        a:focus {
+            text-decoration: underline;
         }
     </style>
 </head>
-
-<body class="bg-white">
-    <!-- Header -->
-    <header class="bg-teal-dark text-white">
-        <div class="container mx-auto px-5 md:px-20 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 5L35 15V25L20 35L5 25V15L20 5Z" stroke="white" stroke-width="2" fill="none" />
-                        <path d="M20 15L25 18V22L20 25L15 22V18L20 15Z" fill="white" />
-                    </svg>
-                </div>
-                <!-- Navigation -->
-                <nav class="flex items-center space-x-6 md:space-x-8">
-                    <a href="#services" class="text-sm md:text-base hover:underline">Services</a>
-                    <a href="#contact" class="text-sm md:text-base hover:underline">Discutons ensemble</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-bg relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center">
-        <div class="w-full flex justify-center">
-            <div class="hero-content w-[1180px] px-[236px]">
-                <div class="flex flex-col text-center h-[236px] justify-center">
-                    <h1
-                        class="text-6xl md:text-7xl lg:text-8xl xl:text-[8.5rem] 2xl:text-[9.5rem] hero-title text-white leading-[0.9] mb-0">
-                        Confidentielles
-                    </h1>
-                    <div class="flex flex-col gap-2 text-white mt-[78px]">
-                        <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light leading-tight">
-                            Médiation familiale
-                        </p>
-                        <p
-                            class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed font-light max-w-xl md:max-w-3xl">
-                            Deux médiatrice, une mission : vous aider à retrouver un dialogue serein.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bienvenue Section -->
-    <section class="bg-beige py-16 md:py-24">
-        <div class="container mx-auto px-5 md:px-20">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl section-title text-gray-900 mb-8 md:mb-12">
-                Bienvenue chez Confidentielles
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
-                <div class="text-gray-900 leading-relaxed text-base md:text-lg">
-                    <p>
-                        Nous offrons un cadre ouvert et impartial où chaque personne peut s'exprimer librement et être
-                        entendue dans ses besoins. Notre rôle est de faciliter le dialogue, de clarifier les enjeux et
-                        d'aider les familles à construire des solutions justes et durables.
-                    </p>
-                </div>
-                <div class="text-gray-900 leading-relaxed text-base md:text-lg">
-                    <p>
-                        Nous guidons les familles à travers les situations complexes, séparation, organisation
-                        parentale, pensions alimentaires, conflits relationnels, en veillant à offrir un espace sécurisé
-                        où chacun peut être entendu. Notre objectif : permettre à toutes les parties de trouver ensemble
-                        une solution constructive et durable, dans le respect et la sérénité.
-                    </p>
-                </div>
-            </div>
-            <div class="text-center">
-                <button
-                    class="bg-accent hover:bg-accent-dark text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-normal transition-colors">
-                    Discutons ensemble
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-bg py-20 md:py-24 lg:py-32">
-        <div class="container mx-auto px-5 md:px-12 lg:px-20 xl:px-24 max-w-7xl">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 xl:gap-24 items-start">
-                <!-- Left Column: Title -->
-                <div>
-                    <h2
-                        class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-white font-normal leading-[0.9] tracking-tight">
-                        Nos services
-                    </h2>
-                </div>
-
-                <!-- Right Column: Services List -->
-                <div class="text-right">
-                    <ul class="space-y-6 md:space-y-7 lg:space-y-8 text-white font-light mb-10 md:mb-12">
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Médiation Familiale</li>
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Accords Amiables</li>
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Pension Alimentaire</li>
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Conflits Relationnels</li>
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Espaces D'écoute Neutres
-                        </li>
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Médiation Parentale</li>
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Soutien Au Dialogue</li>
-                        <li class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white opacity-60">
-                            +Plus</li>
-                    </ul>
-                    <div class="text-right">
-                        <button
-                            class="bg-white text-black px-8 md:px-10 py-4 md:py-5 rounded-full text-base md:text-lg font-normal hover:opacity-90 transition-opacity">
-                            Services
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Témoignages Section -->
-    <section id="temoignages" class="bg-beige py-16 md:py-24">
-        <div class="container mx-auto px-5 md:px-20">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl section-title text-gray-900 text-center mb-4">
-                Témoignages
-            </h2>
-            <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto text-base md:text-lg">
-                Nous croyons que l'expérience de nos clients illustre mieux que tout la qualité de notre
-                accompagnement. Voici ce qu'ils en disent :
-            </p>
-
-            <!-- Testimonial Card -->
-            <div class="max-w-4xl mx-auto mb-12">
-                <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 lg:p-16">
-                    <div class="carousel-container">
-                        <!-- Slide 1 -->
-                        <div class="carousel-slide active">
-                            <p
-                                class="text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-8 leading-relaxed font-medium text-center">
-                                "Grâce à Confidentielles, nous avons enfin pu rétablir un dialogue apaisé après des
-                                mois de tensions. L'approche bienveillante et neutre des médiatrices nous a permis de
-                                nous comprendre à nouveau et de trouver un accord respectueux pour nos enfants. Je me
-                                sens aujourd'hui beaucoup plus serein(e) face à l'avenir."
-                            </p>
-                            <p class="text-xl md:text-2xl text-gray-900 text-center font-medium">— Sophie M.</p>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="carousel-slide">
-                            <p
-                                class="text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-8 leading-relaxed font-medium text-center">
-                                "Nous étions arrivés à un point où la communication était impossible. Grâce à l'écoute
-                                neutre des médiatrices, nous avons pu exprimer nos besoins sans jugement et trouver un
-                                terrain d'entente. Cela a tout changé pour notre famille."
-                            </p>
-                            <p class="text-xl md:text-2xl text-gray-900 text-center font-medium">— Marc T.</p>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="carousel-slide">
-                            <p
-                                class="text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-8 leading-relaxed font-medium text-center">
-                                "Les médiatrices nous ont offert un cadre sécurisé où chacun a pu parler librement. Nous
-                                avons réussi à élaborer un accord clair et respectueux. Je recommande sincèrement leur
-                                approche."
-                            </p>
-                            <p class="text-xl md:text-2xl text-gray-900 text-center font-medium">— Claire D.</p>
-                        </div>
-                    </div>
-
-                    <!-- Carousel Navigation -->
-                    <div class="flex items-center justify-center gap-5 mt-8">
-                        <button onclick="changeSlide(-1)" class="text-gray-900 hover:text-accent transition-colors">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M15 18l-6-6 6-6" />
-                            </svg>
-                        </button>
-                        <div class="flex items-center gap-2">
-                            <div class="carousel-dot active" onclick="goToSlide(0)"></div>
-                            <div class="carousel-dot" onclick="goToSlide(1)"></div>
-                            <div class="carousel-dot" onclick="goToSlide(2)"></div>
-                        </div>
-                        <button onclick="changeSlide(1)" class="text-gray-900 hover:text-accent transition-colors">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto text-base md:text-lg">
-                Bénéficiez d'un accompagnement discret, neutre et profondément humain. Confidentielles Médiation est à
-                vos côtés.
-            </p>
-            <div class="text-center">
-                <button
-                    class="bg-accent hover:bg-accent-dark text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-normal transition-colors">
-                    Discutons ensemble
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Image Separator Section -->
-    <section class="relative w-full h-48 md:h-64 lg:h-80 xl:h-96 overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80" alt="Séparation"
-                class="w-full h-full object-cover" style="filter: blur(2px);">
-        </div>
-        <div class="absolute inset-0 bg-teal-dark opacity-40"></div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer-bg relative">
-        <div class="container mx-auto px-5 md:px-20 py-12 md:py-16 relative z-10">
-            <div class="grid md:grid-cols-4 gap-8 md:gap-12 mb-8">
-                <!-- Logo & Company -->
-                <div class="md:col-span-1">
-                    <div class="mb-4">
-                        <!-- Logo/Icon -->
-                        <div class="mb-4">
-                            <svg class="w-10 h-10 mb-3" viewBox="0 0 40 40" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 5L35 15V25L20 35L5 25V15L20 5Z" stroke="black" stroke-width="2"
-                                    fill="none" />
-                                <path d="M20 15L25 18V22L20 25L15 22V18L20 15Z" fill="black" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-black">Confidentielles</h3>
-                        <p class="text-sm md:text-base text-gray-800">Comprendre. Apaiser. Avancer.</p>
-                    </div>
-                </div>
-
-                <!-- Contact Column 1 -->
-                <div class="text-black">
-                    <p class="mb-2 text-sm md:text-base">contact@confidentielles.be</p>
-                    <p class="text-sm md:text-base">+32 444 666 888</p>
-                </div>
-
-                <!-- Contact Column 2 -->
-                <div class="text-black">
-                    <p class="mb-2 text-sm md:text-base">Chaussée de Louvain 545</p>
-                    <p class="text-sm md:text-base">1030 Brussels</p>
-                </div>
-
-                <!-- Social Media -->
-                <div class="text-black">
-                    <p class="mb-2 text-sm md:text-base"><a href="#" class="hover:underline">Instagram</a></p>
-                    <p class="mb-2 text-sm md:text-base"><a href="#" class="hover:underline">Facebook</a></p>
-                    <p class="text-sm md:text-base"><a href="#" class="hover:underline">LinkedIn</a></p>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="border-t border-black/20 pt-8 mt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center text-sm text-black">
-                    <p class="mb-2 md:mb-0">Confidentielles</p>
-                    <p>© 2023 All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const totalSlides = slides.length;
-
-        function showSlide(n) {
-            // Hide all slides
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            // Show current slide
-            if (n >= totalSlides) {
-                currentSlide = 0;
-            } else if (n < 0) {
-                currentSlide = totalSlides - 1;
-            } else {
-                currentSlide = n;
-            }
-
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-        }
-
-        function goToSlide(n) {
-            showSlide(n);
-        }
-
-        // Auto-play carousel (optional)
-        // setInterval(() => {
-        //     changeSlide(1);
-        // }, 5000);
-    </script>
+<body>
+    <main>
+        <h1>Confidentielles</h1>
+        <p>Vous allez être redirigé·e vers la nouvelle page d'accueil.</p>
+        <p>
+            <a href="html/index.html">Accéder à l'accueil</a>
+        </p>
+    </main>
 </body>
-
 </html>
