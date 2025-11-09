@@ -3,6 +3,8 @@
     --teal-dark: #004f51;
     --beige: #F7F4EB;
     --off-white: rgba(255, 255, 255, 0.85);
+    --charcoal: #1F1F1F;
+    /* Added charcoal variable */
 }
 
 * {
@@ -157,36 +159,13 @@ body {
     font-size: 0.95rem;
 }
 
-.cta-section {
-    padding: 4rem 5vw 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.cta-section h3 {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    margin: 0;
-    font-weight: 400;
-}
-
-.cta-btn {
-    background: white;
-    color: var(--teal);
-    border: none;
-    border-radius: 999px;
-    padding: 0.85rem 2.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-}
+/* Removed .cta-section as it's replaced by .contact-form-section */
+/* Removed .cta-btn as it's replaced by .btn.btn-accent in the form */
 
 footer {
     background: var(--beige);
-    color: #1F1F1F;
+    color: var(--charcoal);
+    /* Changed to charcoal */
     padding: 4rem 5vw 3rem;
 }
 
@@ -220,4 +199,96 @@ footer {
     .step {
         flex-direction: column;
     }
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 4rem 5vw 5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* Darker border for white background */
+    background: white;
+    /* Changed to white */
+    color: var(--charcoal);
+    /* Changed to charcoal */
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    color: var(--charcoal);
+    /* Ensure h2 is charcoal */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    /* Changed to charcoal */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* Darker border for white background */
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Lighter background for white section */
+    color: var(--charcoal);
+    /* Changed to charcoal */
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--teal);
+    /* Teal border on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 100, 105, 0.3);
+    /* Teal glow on focus */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn.btn-accent {
+    align-self: center;
+    background: var(--teal);
+    /* Changed to teal for contrast on white background */
+    color: white;
+    /* Changed to white */
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.btn-accent:hover {
+    background: var(--teal-dark);
+    /* Darker teal on hover */
+    color: white;
 }
