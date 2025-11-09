@@ -1,4 +1,3 @@
-# Service de Médiation - Page d'accueil
+# Service de Médiation 
 
-En attente du fichier Figma pour implémenter le design exact.
 
