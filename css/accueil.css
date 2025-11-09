@@ -50,7 +50,7 @@ a:hover {
     gap: 2rem;
     font-size: 0.95rem;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 .hero {
@@ -97,7 +97,7 @@ a:hover {
 .hero-kicker {
     font-size: 1.2rem;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 .hero-copy {
