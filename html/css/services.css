@@ -88,34 +88,46 @@ a:hover {
     min-height: inherit;
     display: flex;
     align-items: flex-end;
-    padding: 4rem 0;
+    /* place block at the bottom */
+    justify-content: flex-start;
+    /* keep it on the left */
+    padding: 3.5rem 0;
+    /* slightly tighter */
     color: white;
 }
 
 .hero-overlay h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    /* Base size for mobile */
-    font-weight: 500;
+    font-size: clamp(1.25rem, 1.2vw + 0.4rem, 1.9rem);
+    line-height: 1.25;
+    font-weight: 400;
     margin: 0;
-    max-width: 720px;
+    max-width: 42ch;
+    /* compact text block */
+    text-wrap: balance;
+    /* nicer multi-line breaks */
 }
 
 .stats {
     background: var(--beige);
-    padding: 3rem 0;
+    padding: 5rem 0;
 }
 
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.stat {
+    display: inline-block;
     text-align: center;
 }
 
 .stat h2 {
     margin: 0;
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(3rem, 8vw, 5rem);
     color: var(--wine);
     font-weight: 400;
 }
@@ -123,6 +135,10 @@ a:hover {
 .stat p {
     margin-top: 0.5rem;
     color: #6c4b44;
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .services-table {
@@ -231,23 +247,17 @@ a:hover {
     color: #777;
 }
 
-/* Media queries for h1 font size */
+/* font-size handled by clamp(); keep queries for future tweaks if needed */
 @media (min-width: 576px) {
-    .hero-overlay h1 {
-        font-size: 2.4rem;
-    }
+    .hero-overlay h1 {}
 }
 
 @media (min-width: 768px) {
-    .hero-overlay h1 {
-        font-size: 2.8rem;
-    }
+    .hero-overlay h1 {}
 }
 
 @media (min-width: 992px) {
-    .hero-overlay h1 {
-        font-size: 3.3rem;
-    }
+    .hero-overlay h1 {}
 }
 
 @media (max-width: 768px) {
