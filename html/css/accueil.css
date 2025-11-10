@@ -388,3 +388,20 @@ a:hover {
         padding: 2rem 1.5rem;
     }
 }
+
+.image-banner {
+    width: 100%;
+    overflow: hidden;
+    /* Ensures image doesn't overflow its container */
+    margin-top: 4rem;
+    /* Add some space above the image */
+}
+
+.image-banner img {
+    display: block;
+    /* Removes extra space below image */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ensures the image covers the area without distortion */
+}

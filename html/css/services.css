@@ -270,3 +270,15 @@ a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+.image-banner {
+    width: 100%;
+    overflow: hidden; /* Ensures image doesn't overflow its container */
+    /* Removed margin-top */
+}
+
+.image-banner img {
+    display: block; /* Removes extra space below image */
+    width: 100%;
+    height: auto;
+}
