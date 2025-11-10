@@ -405,3 +405,8 @@ a:hover {
     object-fit: cover;
     /* Ensures the image covers the area without distortion */
 }
+
+.footer-social a {
+    text-decoration: none;
+    color: inherit;
+}

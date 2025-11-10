@@ -282,3 +282,8 @@ a:hover {
     width: 100%;
     height: auto;
 }
+
+.footer-social a {
+    text-decoration: none;
+    color: inherit;
+}
