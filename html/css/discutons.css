@@ -129,6 +129,7 @@ a:hover {
 .step {
     display: flex;
     gap: clamp(1rem, 4vw, 4rem);
+    align-items: flex-start;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 3rem;
 }
@@ -142,6 +143,8 @@ a:hover {
     flex: 0 0 auto;
     font-size: clamp(4rem, 12vw, 8rem);
     font-weight: 300;
+    flex: 0 0 7rem;
+    text-align: right;
     line-height: 1;
     color: white;
 }
