@@ -216,35 +216,35 @@ a:hover {
 
 .site-footer {
     background: var(--beige);
-    padding: 4rem 0 3rem;
+    padding: 3.5rem 0 2rem;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    font-size: 0.95rem;
+    margin-bottom: 2rem;
 }
 
-.footer-brand h2 {
+.footer-brand h3 {
     margin: 0 0 0.5rem;
-    font-weight: 500;
 }
 
-.footer-contact p,
-.footer-meta p {
+.footer-contact p {
     margin: 0.2rem 0;
 }
 
-.footer-social {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
+.footer-meta {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6f6f6f;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 1.5rem;
 }
 
-.footer-meta {
-    font-size: 0.85rem;
-    color: #777;
+.footer-social a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* font-size handled by clamp(); keep queries for future tweaks if needed */
