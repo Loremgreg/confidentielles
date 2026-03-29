@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confidentielles · Discutons ensemble</title>
+    <title>Confidentielles · Déroulement</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,8 +20,12 @@
                     <span class="logo-mark">C</span>
                 </a>
                 <nav class="nav-links" aria-label="Navigation principale">
-                    <a href="services.html">Services</a>
-                    <a href="discutons.html">Discutons ensemble</a>
+                    <a href="services.html">Les situations</a>
+                    <a href="comprendre-mediation.html">Comprendre la médiation</a>
+                    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+                    <a href="discutons.html">Déroulement</a>
+                    <a href="nous-rencontrer.html">Nous rencontrer</a>
+                    <a href="cadre-professionnel.html">Notre cadre professionnel</a>
                 </nav>
             </div>
         </div>
@@ -29,78 +33,56 @@
 
     <main>
         <section class="hero">
-            <h1>Parlons-en</h1>
+            <h1>Déroulement</h1>
         </section>
 
         <section class="section">
-            <h2>Prêt à entamer une démarche apaisée&nbsp;?</h2>
+
+
+            <div class="deroulement-content">
+                <div class="deroulement-item">
+                    <h3>Le premier entretien</h3>
+                    <p>Une première rencontre permet de clarifier la demande, le cadre et les attentes de chacun. Ce
+                        premier temps permet aussi de voir, simplement, si vous vous sentez à votre place dans ce cadre.
+                    </p>
+                </div>
+
+                <div class="deroulement-item">
+                    <h3>Les rencontres</h3>
+                    <p>Les rencontres se déroulent en présence de toutes les personnes concernées. Chacun peut
+                        s'exprimer directement, en son nom, et être entendu dans ce qui est important pour lui. Le
+                        travail avance à partir de ce qui est apporté en séance, au rythme qui respecte votre situation.
+                    </p>
+                </div>
+
+                <div class="deroulement-item">
+                    <h3>La confidentialité</h3>
+                    <p>La médiation s'inscrit dans un cadre professionnel strict, encadré par la loi et par des règles
+                        déontologiques précises. Rien de ce qui est dit ou rédigé en séance ne peut être repris ou
+                        utilisé dans une éventuelle procédure judiciaire, à l'exception du protocole de médiation et de
+                        la convention d'accord signée. Cette confidentialité engage la responsabilité du médiateur.</p>
+                </div>
+
+                <div class="deroulement-item">
+                    <h3>En cas de procédure</h3>
+                    <p>La médiation peut être proposée par les parties ou par le juge dans le cadre d'une procédure.
+                        Lorsque la médiation est engagée, la procédure judiciaire est suspendue pendant le processus de
+                        médiation. Lorsque des accords sont trouvés, ils sont intégrés au dossier et peuvent mettre fin
+                        à la procédure. À défaut, la procédure reprend son cours sur les points qui restent en
+                        discussion.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="steps" aria-label="Processus d'accompagnement">
-            <article class="step">
-                <div class="step-number">1.</div>
-                <div class="step-content">
-                    <div class="step-title">Premier échange gratuit</div>
-                    <p class="step-text">
-                        Nous organisons un premier contact pour comprendre votre situation, vos besoins et vos attentes.
-                        Cet échange permet d'exposer les difficultés rencontrées et de déterminer si la médiation est la
-                        voie
-                        la plus adaptée à votre situation.
-                    </p>
-                </div>
-            </article>
-
-            <article class="step">
-                <div class="step-number">2.</div>
-                <div class="step-content">
-                    <div class="step-title">Séance d'exploration</div>
-                    <p class="step-text">
-                        Si vous décidez d'aller plus loin, nous vous proposons une séance dédiée à clarifier les sujets
-                        à aborder,
-                        les priorités de chacun et le cadre de la médiation. Cette étape permet d'identifier les points
-                        sensibles
-                        et d'établir une base commune de travail.
-                    </p>
-                </div>
-            </article>
-
-            <article class="step">
-                <div class="step-number">3.</div>
-                <div class="step-content">
-                    <div class="step-title">Parcours de médiation</div>
-                    <p class="step-text">
-                        Nous entamons ensuite les séances de médiation. Ensemble, nous avançons vers des solutions
-                        équilibrées,
-                        respectueuses et réalistes. À chaque étape, nous veillons à maintenir un climat neutre,
-                        confidentiel
-                        et propice au dialogue.
-                    </p>
-                </div>
-            </article>
-        </section>
-
-        <section class="contact-form-section" id="contact">
-            <h2>Besoin d'informations?</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-accent">Envoyer</button>
-            </form>
+        <section class="cta-section">
+            <div class="container">
+                <a class="btn-cta" href="nous-rencontrer.html">Nous rencontrer</a>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer id="contact" class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <!-- Company -->
@@ -108,28 +90,17 @@
                     <h3>Confidentielles</h3>
                     <p>Comprendre. Apaiser. Avancer.</p>
                 </div>
-
-                <!-- Contact Column 1 -->
                 <div class="footer-contact">
-                    <p>contact@confidentielles.be</p>
-                    <p>+32 (0)477 65 55 28</p>
+                    <p>info@confidentielles.be</p>
+                    <p>0470/53.70.34</p>
+                    <p>0494/33.80.34</p>
                 </div>
-
-                <!-- Contact Column 2 -->
                 <div class="footer-contact">
                     <p>Chaussée de Liège 548</p>
-                    <p>5100 Namur</p>
+                    <p>5100 Namur (Jambes)</p>
                 </div>
 
-                <!-- Social Media -->
-                <div class="footer-social">
-                    <p><a href="https://www.youtube.com/watch?v=Sagg08DrO5U&list=RDSagg08DrO5U&start_radio=1"
-                            target="_blank">Instagram</a></p>
-                    <p><a href="https://www.youtube.com/watch?v=Sagg08DrO5U&list=RDSagg08DrO5U&start_radio=1"
-                            target="_blank">Facebook</a></p>
-                    <p><a href="https://www.youtube.com/watch?v=Sagg08DrO5U&list=RDSagg08DrO5U&start_radio=1"
-                            target="_blank">LinkedIn</a></p>
-                </div>
+
             </div>
 
             <!-- Copyright -->
